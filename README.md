@@ -1,6 +1,6 @@
 # From Bricks to Bytes - RealEstate Tokenization 
 
-The project title is : "From Bricks to Bytes"
+The project title is : "**From Bricks to Bytes**"
 
 The objective : Real-Estate Tokenization. 
 
