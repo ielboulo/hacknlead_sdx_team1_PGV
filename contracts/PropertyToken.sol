@@ -130,16 +130,11 @@ contract PropertyToken is ERC20 {
         delete pendingSales[msg.sender];
     }
 
-    // function withdrawFunds(uint256 _amount) external onlyOwner {
-    //     require(_amount > 0 && _amount <= address(this).balance, "Invalid withdrawal amount");
-    //     payable(owner).transfer(_amount);
-    //     emit WithdrawFundsDone(_amount, owner);
-    // }
-function withdrawFunds(uint256 _amount) external onlyOwner {
-    require(_amount > 0 && _amount <= address(this).balance, "Invalid withdrawal amount");
+    function withdrawFunds(uint256 _amount) external onlyOwner {
+        require(_amount > 0 && _amount <= address(this).balance, "Invalid withdrawal amount");
 
-    payable(owner).transfer(_amount);
-}
+        payable(owner).transfer(_amount);
+    }
 
     function burn(uint256 amount) external {
         _burn(address(this), amount);
